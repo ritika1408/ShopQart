@@ -1,0 +1,143 @@
+
+a:-webkit-any-link {
+    
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+*{  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+  }  
+header{  
+    display: flex;  
+    justify-content: space-evenly;  
+    align-items: center;  
+    height:60px;  
+    width:100%;  
+  background:#2E765E;  
+  } 
+.heading ul{  
+        display:flex;  
+}  
+.logo__icon{  
+   color:#E5DDC8;  
+   transition-duration: 1s;  
+   font-weight: 800;  
+
+}  
+.logo__icon:hover{  
+  color: rgb(255,83,73);
+  transition-duration: 1s;  
+}
+
+
+.heading ul li{  
+      list-style: none;  
+}  
+.Links{  
+      margin:5px;  
+      text-decoration: none;  
+      color:black;  
+      font-weight: 500;  
+      position:relative;  
+      color:white;  
+      margin:2px 14px;  
+      font-size: 18px;  
+    transition-duration: 1s;  
+ }
+
+.Links:active{  
+      color:red;  
+    }  
+.Links:hover{  
+      color:rgb(243, 168, 7);  
+      transition-duration: 1s;  
+}  
+.Links::before{  
+      content:'';  
+      height:2px;  
+      width:0px;  
+      position:absolute;  
+      left:0;  
+      bottom:0;  
+      background-color: white;  
+      transition-duration: 1s;  
+}  
+.Links:hover::before{  
+      width:100%;   
+      transition-duration: 1s;  
+    background-color:rgb(243, 168, 7);  
+}
+.input__search{
+  height:30px;  
+  width:300px;  
+  text-decoration: none;  
+  border:1px solid royalblue;  
+  padding:5px;
+  
+}
+.item__search{  
+  display:flex;  
+} 
+.item__search > input[type="text"] {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
+  background-color: white;
+  border: none;
+  color: rgba(0, 0, 0, 0.637);
+  padding: 1vmax 2vmax;
+  width: 400px;
+  outline: none;
+  border-radius: 0%;
+  font: 300 1.1vmax cursive;
+  box-sizing: border-box;
+  height: 35px;
+}
+.item__search > input[type="submit"] {
+  height: 35px;
+  border-radius: 0%;
+  background-color: tomato;
+  border: none;
+  padding: 1vmax;
+  width: 65px;
+  font: 300 1.1vmax "Roboto";
+  cursor: pointer;
+  color: white;
+  ;
+  transition: all 0.5s;
+}
+.item__search> input[type="submit"]:hover {
+  background-color: rgb(55, 97, 214);
+}
+
+@media screen and (max-width: 600px) {
+  .input__search > input[type="text"] {
+    width: 30px;
+    font: 300 4vw cursive;
+    height: 14px;
+  }
+
+  .search__box > input[type="submit"] {
+    height: 10%;
+    width: 30%;
+    font: 300 4vw "Roboto";
+  }
+} 
+
+
+/* .header__search{
+  width:35px;  
+    height:33px;  
+    background-color: rgb(240, 197, 6); ;  
+    color:black;
+    border: 1px solid black;
+  
+}
+.header__search:hover{  
+    cursor: pointer;  
+  }   */
+
+
+

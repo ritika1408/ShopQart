@@ -19,6 +19,7 @@ const productSchema = new  mongoose.Schema({
     ratings: {
       type: Number,
       default: 0,
+      
     },
     images: [
       {
@@ -68,12 +69,12 @@ const productSchema = new  mongoose.Schema({
       },
     ],
   
-    // user: {
-    //   type:String, 
-    //   ref: "User",
-    //   required: true,
-    //   // mongoose.Schema.ObjectId,
-    // },
+    user: {
+      type:mongoose.Schema.ObjectId, 
+      ref: "User",
+      required: true,
+      
+    },
     createdAt: {
       type: Date,
       default: Date.now,
