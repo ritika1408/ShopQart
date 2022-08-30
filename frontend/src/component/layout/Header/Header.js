@@ -4,7 +4,8 @@ import './Header.css'
 import Badge from '@mui/material/Badge';
 
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import LoginIcon from '@mui/icons-material/Login';
+
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import MetaData from '../MetaData';
 
 const Header = () => {
@@ -54,7 +55,7 @@ const Header = () => {
 						<li> <NavLink to="/Products" className="Links">  Products</NavLink></li>
 						<li> <NavLink to="/about" className="Links">About</NavLink></li>
 						<li> <NavLink to="/contact" className="Links"> Contact</NavLink></li>
-						<li> <NavLink to="/login" className="Links"> <LoginIcon /></NavLink></li> 
+						<li> <NavLink to="/login" className="Links"> <AccountCircleIcon/></NavLink></li> 
           </ul>  
         </div>  
      </header>

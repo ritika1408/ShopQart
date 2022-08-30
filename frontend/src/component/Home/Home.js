@@ -30,7 +30,7 @@ const Home = () => {
      <MetaData title="ShopQart"/>
      <div className="home__banner">
         <p>Welcome to ShopQart</p>
-        <h1><b>Find Amazing Products</b></h1>
+        <h1><b>Enjoy Your Shopping with the Best Quality</b></h1>
         <a href = "#container">
           <button>
             Scroll <CgMouse/>
