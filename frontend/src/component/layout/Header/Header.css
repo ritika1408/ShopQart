@@ -112,6 +112,19 @@ header{
   background-color: rgb(55, 97, 214);
 }
 
+.speedDial {
+  position: fixed;
+  right: 2vmax;
+  top: 5vmax;
+}
+
+.speedDialIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+}
+
+
 @media screen and (max-width: 600px) {
   .input__search > input[type="text"] {
     width: 30px;

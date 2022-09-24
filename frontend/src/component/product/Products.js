@@ -34,7 +34,7 @@ const Products = ({match}) => {
         error,
         productsCount,
         resultPerPage,
-        filteredProductsCount
+        // filteredProductsCount
     
       } = useSelector((state) => state.products);
     const setCurrentPageNo = (e)=>{
@@ -56,7 +56,7 @@ const Products = ({match}) => {
       
     }, [dispatch,keyword,currentPage, price,category,ratings,alert,error])
 
-    let count = filteredProductsCount;
+    // let count = filteredProductsCount;
     
   return (
     <Fragment>

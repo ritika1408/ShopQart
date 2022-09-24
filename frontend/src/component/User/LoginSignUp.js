@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 import FaceIcon from "@material-ui/icons/Face";
 import Loader from '../layout/Loader/Loader';
 import { useDispatch, useSelector } from 'react-redux';
-import { clearErrors, login, } from '../../actions/userAction';
+import { clearErrors, login, register } from '../../actions/userAction';
 import { useAlert } from 'react-alert';
 
-const LoginSignUp = ({history}) => {
+const LoginSignUp = ({history ,location}) => {
 
     const dispatch= useDispatch();
     const alert = useAlert();
@@ -41,7 +41,7 @@ const {error, loading, isAuthenticated } = useSelector((state)=>state.user);
     myForm.set("email", email);
     myForm.set("password", password);
     myForm.set("avatar", avatar);
-    // dispatch(register(myForm));
+    dispatch(register(myForm));
     // console.log('Sign Up Form Submitted');
     
   };
@@ -61,16 +61,16 @@ const {error, loading, isAuthenticated } = useSelector((state)=>state.user);
             setUser({ ...user, [e.target.name]: e.target.value });
           }
   };
-
+const redirect = location.search ? location.search.split("=")[1] :"/account";
   useEffect(() => {
 if(error){
     alert.error(error);
     dispatch(clearErrors());
 }
 if(isAuthenticated){
-    history.push("/account");
+    history.push(redirect);
 }
- }, [dispatch,error,alert,history, isAuthenticated]);
+ }, [dispatch,error,alert,history, isAuthenticated, redirect]);
   
   const switchTabs = (e, tab)=>{
              if(tab ==='login'){

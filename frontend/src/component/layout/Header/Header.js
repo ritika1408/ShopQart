@@ -6,10 +6,13 @@ import Badge from '@mui/material/Badge';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MetaData from '../MetaData';
+import {  useSelector } from "react-redux";
+
 
 const Header = () => {
   const history = useHistory();
+  // const [showMediaIcons, setShowMediaIcons] = useState(false);
+	const { cartItems } = useSelector((state) => state.cart);
   const [keyword, setKeyword] = useState(" ");
   const searchSubmitHandler = (e)=>{
       e.preventDefault();
@@ -23,7 +26,7 @@ const Header = () => {
   }
   };
   return (
-
+   
     <header>  
     <div class="logo"> 
     <NavLink to="/" className="logo__icon">
@@ -56,6 +59,10 @@ const Header = () => {
 						<li> <NavLink to="/about" className="Links">About</NavLink></li>
 						<li> <NavLink to="/contact" className="Links"> Contact</NavLink></li>
 						<li> <NavLink to="/login" className="Links"> <AccountCircleIcon/></NavLink></li> 
+            <li> <NavLink to="/cart" className="Links"><Badge badgeContent={cartItems.length} color ="warning">
+            <ShoppingCartIcon />
+ 					</Badge>
+           </NavLink></li> 
           </ul>  
         </div>  
      </header>
