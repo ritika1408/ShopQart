@@ -1,34 +1,41 @@
-import React from 'react'
-import playStore from "../../../images/playstore.png";
-import appStore from "../../../images/Appstore.png"; 
+import React from "react";
 import "./Footer.css";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import { NavLink } from "react-router-dom";
+
 const Footer = () => {
   return (
-    <footer id = "footer">
-    <div className="leftFooter">
-    <h4>Download Our App</h4>
-            <p>Download App for Android and IOS mobile phone</p>
-            <img src={playStore} alt="PlayStore" />
-            <img src={appStore} alt="AppStore" />
-    </div>
-     <div className="midFooter">
-        <p className = "greeting">Thank you for visiting us</p>
-        <h1>ShopQart</h1>
-        <p className='rights'>High Quality is our first priority</p>
-       
-
-        <p className ="rights">Copyrights 2022 &copy; all rights reserved</p>
-        <hr className='footer__line'/>
+    <footer id="footer">
+      <div className="leftFooter">
+      <h4>Company</h4>
+          <ul>
+            <li><NavLink to ="/" className="links">Home</NavLink></li>
+            <li><NavLink to ="/Products" className="links">Products</NavLink></li>
+            <li><NavLink to ="/about" className="links">About</NavLink></li>
+            <li><NavLink to ="/Contact" className="links">Contact</NavLink></li>
+           
+          </ul>
       </div>
-        <div className="rightFooter">
-        <h4>Follow Us</h4>
-        <a href="http://instagram.com">Instagram</a>
-        <a href="http://youtube.com">Youtube</a>
-        <a href="http://facebook.com">Facebook</a>
-         
-        </div>
-    </footer>
-  )
-}
 
-export default Footer
+      <div className="midFooter">
+        <h1>ShopQart</h1>
+        <p>High Quality is our first priority</p>
+
+      </div>
+
+      <div className="rightFooter">
+        <h4>Find Us On</h4>
+        <a href="http://youtube.com"><YouTubeIcon className="s-i" />Youtube</a>
+       
+        <a href="https://github.com/ritika1408"><GitHubIcon className="s-i"/>GitHub</a>
+        <a href ="https://www.linkedin.com/in/ritika-malhotra-870681201/" > <LinkedInIcon className ="s-i"/>LinkedIn</a>
+        <a href="https://www.instagram.com/" > <InstagramIcon className="s-i" />Instagram</a>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

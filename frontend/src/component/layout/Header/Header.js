@@ -54,10 +54,10 @@ const Header = () => {
       </div>  
         <div class="heading">  
           <ul>  
-         <li> <NavLink to="/" className="Links"> Home </NavLink>  </li>
-						<li> <NavLink to="/Products" className="Links">  Products</NavLink></li>
+         <li> <NavLink to="/" className="Links">Home</NavLink>  </li>
+						<li> <NavLink to="/Products" className="Links">Products</NavLink></li>
 						<li> <NavLink to="/about" className="Links">About</NavLink></li>
-						<li> <NavLink to="/contact" className="Links"> Contact</NavLink></li>
+						<li> <NavLink to="/contact" className="Links"> Contact Us</NavLink></li>
 						<li> <NavLink to="/login" className="Links"> <AccountCircleIcon/></NavLink></li> 
             <li> <NavLink to="/cart" className="Links"><Badge badgeContent={cartItems.length} color ="warning">
             <ShoppingCartIcon />

@@ -20,20 +20,31 @@ footer {
 }
 .leftFooter > h4 {
   font-family: "Roboto";
-  font-size: 1vmax;
+  font-size: 1.5vmax;
+  text-align: left;
 }
-.leftFooter > p {
-  text-align: center;
+.leftFooter > ul{
+  list-style-type: none;
+}
+.leftFooter > ul > li > a{
+  text-align: left;
   font-size: 1.2vmax;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white !important;
+  line-height: 2.5em;
+
+  
 }
-.leftFooter > img {
+.leftFooter > ul > li  > a:hover{
+  color: blue;
+}
+
+/* .leftFooter > img {
   width: 10vmax;
   margin: 1vmax;
   cursor: pointer;
-}
-
+} */
 
 .midFooter {
   width: 60%;
@@ -85,4 +96,8 @@ footer {
 
 .rightFooter > a:hover {
   color: #eb4034;
+}
+.s-i{
+  align-items: center;
+
 }
